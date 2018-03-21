@@ -3,7 +3,7 @@ Sample Angular application for currency conversion based on fixer API
 
 ### Basic functionality 
 
-1) This application lets the user to select the source currency and target currency. 
+1) This application lets the user to select the source currency and get the target currency. 
 2) User needs to enter the amount next to source currency to view the equivalent target currency.
 
 ### Behind the scenes
@@ -15,14 +15,14 @@ Sample Angular application for currency conversion based on fixer API
 
 ### Technology stack 
 
-Used angularjs, npm, webpack, es6 ...etc
-Used scss for styling.
-Please explore package.json and project to get the full understanding.  
+(1) Used angularjs, npm, webpack, es6 ...etc
+(2) Used scss for styling.
+(3) Please explore package.json and project to get the full understanding.  
 
 ### How to run
 
 1) Download or clone the project
-   command to clone 'git clone (provide Url)'     
+   command to clone 'git clone https://github.com/MaanasaL/CurrencyConverter.git'     
 2) Install - run 'npm install' command in root directory (same directory with package.json)
-3) Run command 'npm start'
-4) Open browser and give http://localhost:4200/
+3) Run command 'npm start' to start the application
+4) Open browser and use URL http://localhost:4200/ to launch the application
