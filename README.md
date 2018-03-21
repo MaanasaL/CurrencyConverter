@@ -25,4 +25,4 @@ Sample Angular application for currency conversion based on fixer API
    command to clone 'git clone https://github.com/MaanasaL/CurrencyConverter.git'     
 2) Install - run 'npm install' command in root directory (same directory with package.json)
 3) Run command 'npm start' to start the application
-4) Open browser and use URL http://localhost:4200/ to launch the application
+4) Open browser and use URL http://127.0.0.1:4200/ to launch the application

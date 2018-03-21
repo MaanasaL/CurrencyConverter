@@ -15,9 +15,9 @@ export class CurrencyService {
 
         // Check input Currency type passed and modify URL
         if (inputCurrencyType) {
-            url = Utils.serviceUrl + '?base=' + inputCurrencyType;
+            url = Utils.SERVICE_URL + '?base=' + inputCurrencyType;
         } else {
-            url = Utils.serviceUrl;
+            url = Utils.SERVICE_URL;
         }
         // Get currency exchange rates from API
         return this.http.get(url)

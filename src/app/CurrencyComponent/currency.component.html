@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="disclaimer-link-property" (click)="showDisclaimer = !showDisclaimer" (keyup.enter)="showDisclaimer = !showDisclaimer" >
-                <span class="slds-float--right" tabIndex="0">Disclaimer</span>
+                <a class="slds-float--right" tabIndex="0">Disclaimer</a>
             </div>
             <div class="disclaimer-information" [ngClass]="{'disclaimer-visibility': showDisclaimer}">
                 The currency rates might not be based latest and are based on data from fixer api. Accuracy is not guaranteed for these rates.

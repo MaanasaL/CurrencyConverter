@@ -26,8 +26,8 @@ export class CurrencyComponent implements OnInit {
 
     ngOnInit() {
         this.rates = [{ 'id':'CAD', 'value':'1'},{'id':'USD', 'value':'2'},{'id':'EUR', 'value':'3'}]
-        this.inputCurrency = Utils.default_inputCurrency;
-        this.outputCurrency = Utils.default_outputCurrency;
+        this.inputCurrency = Utils.DEFAULT_INPUT_CURRENCY;
+        this.outputCurrency = Utils.DEFAULT_OUTPUT_CURRENCY;
     }
     // Get the exchange rates from service call and convert the currency 
     public convertCurrency() {
@@ -40,11 +40,11 @@ export class CurrencyComponent implements OnInit {
 
             } else {
                 //Display error message when service is down
-                this.errorMessage = Utils.errorMessage_service_down;
+                this.errorMessage = Utils.SERVICE_DOWN_ERROR_MESSAGE;
             }
         }, (error) => {
             //Display error message if any error occurs in service call
-            this.errorMessage = Utils.error_in_service_call + error.statusText;
+            this.errorMessage = Utils.ERROR_IN_SERVICE_CALL + error.statusText;
         });
     }
     //calculate the currency amount for the given input amount and the target currency

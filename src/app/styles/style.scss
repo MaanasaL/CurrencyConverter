@@ -43,10 +43,6 @@ $disclaimer-font-size : 14px;
   font-size: $disclaimer-font-size;
   padding : ($padding-width/4)*3 ($padding-width/4) ($padding-width/4)*3 ($padding-width/4)*3; 
 }
-.disclaimer-link:hover
-{
-  cursor: pointer;
-}
 input:focus::-webkit-input-placeholder{
   color: transparent;
 }
