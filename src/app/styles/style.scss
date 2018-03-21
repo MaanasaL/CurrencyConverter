@@ -1,0 +1,56 @@
+$padding-width : 20px;
+$disclaimer-font-size : 14px;
+
+.currency-container
+{
+  float:left;
+  border:1px solid black;
+  padding: $padding-width;
+  margin: $padding-width/2;
+}
+.show-error-message
+{
+    visibility: visible;
+    color: red;
+    font-weight: bold;
+}
+.text-disabled
+{
+    background-color: transparent !important;    
+}
+.currency-dropdown-width
+{
+  width: $padding-width*4;
+}
+.disclaimer-information 
+{
+  visibility: hidden;
+  margin-top: $padding-width/2;
+  width: 300px;
+  font-size: $disclaimer-font-size;
+  @media screen and (max-width: 420px)
+  {
+    width: 100%;
+  }
+}
+.disclaimer-visibility
+{
+  visibility: visible;
+}
+.disclaimer-link-property
+{
+  color: blue;
+  font-size: $disclaimer-font-size;
+  padding : ($padding-width/4)*3 ($padding-width/4) ($padding-width/4)*3 ($padding-width/4)*3; 
+}
+.disclaimer-link:hover
+{
+  cursor: pointer;
+}
+input:focus::-webkit-input-placeholder{
+  color: transparent;
+}
+
+input:focus::-moz-placeholder{
+  color: transparent;
+}
