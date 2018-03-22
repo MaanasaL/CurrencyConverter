@@ -16,29 +16,33 @@ export class InputValidatorDirective {
     constructor(private elementRef: ElementRef) {
     }
 
-    @HostListener('keydown', [ '$event' ])
+    @HostListener('keypress', [ '$event' ])
     onKeyDown(keyboardevent: KeyboardEvent) {
+      let inputValue: string = this.elementRef.nativeElement.value;
     // to allow only few special keys
      if (this.validKeyEvents.indexOf(keyboardevent.key) !== -1) {
         return;
-     }
-        
-    let inputValue: string = this.elementRef.nativeElement.value;
+     }     
  
     if(inputValue=='0' && keyboardevent.key=='0'){
-         event.preventDefault();
+      keyboardevent.preventDefault();
     }
     // to allow only 2 digits after decimal
-    if ((inputValue.indexOf('.') != -1) && (inputValue.substring(inputValue.indexOf('.')).length > 2) 
-    &&  (keyboardevent.which != 0 && keyboardevent.which != 8)) {
-            event.preventDefault();
+    
+    if ((inputValue.indexOf('.') != -1) && (keyboardevent.which != 0 && keyboardevent.which != 8)) {
+      let pos = this.elementRef.nativeElement.selectionStart;
+    
+        if(inputValue.substring(inputValue.indexOf('.')).length > 2 && pos > inputValue.indexOf('.'))
+           keyboardevent.preventDefault();
     }
     // do not allow any special characters after the inputvalue
     let checkNextInput: string = inputValue.concat(keyboardevent.key);
     if (checkNextInput && !String(checkNextInput).match(this.regularExp)) {
-         event.preventDefault();
+      keyboardevent.preventDefault();
     }
     
-    }
+  }  
+   
+    
 }
 

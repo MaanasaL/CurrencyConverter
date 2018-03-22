@@ -51,8 +51,7 @@ export class CurrencyComponent implements OnInit {
     public calculateCurrency() {
         // if both currencies are same display the same output amount as input amount
         if (this.outputCurrency === this.inputCurrency) {
-              this.outputAmount = this.inputAmount;
-
+              this.outputAmount = String(Math.round(Number(this.inputAmount)*100)/100);   
         } else {
             //calculate the output amount if there is no error in service call
             if (!this.errorMessage) {   
